@@ -9,14 +9,14 @@ tasks:
   build:
     desc: Build LiteLLM ARM64 image
     cmds:
-      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:v{{.VERSION}} .
+      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:{{.VERSION}} .
 
   push:
     desc: Build and push LiteLLM ARM64 image
     cmds:
-      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:v{{.VERSION}} --push .
+      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:{{.VERSION}} --push .
 
   build-load:
     desc: Build and load LiteLLM ARM64 image locally
     cmds:
-      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:v{{.VERSION}} --load .
+      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:{{.VERSION}} --load .
