@@ -1,0 +1,22 @@
+version: "3"
+
+vars:
+  IMAGE: evoio/litellm
+  VERSION: 1.82.3
+  PLATFORM: linux/arm64
+
+tasks:
+  build:
+    desc: Build LiteLLM ARM64 image
+    cmds:
+      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:v{{.VERSION}} .
+
+  push:
+    desc: Build and push LiteLLM ARM64 image
+    cmds:
+      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:v{{.VERSION}} --push .
+
+  build-load:
+    desc: Build and load LiteLLM ARM64 image locally
+    cmds:
+      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:v{{.VERSION}} --load .
