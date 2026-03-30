@@ -15,7 +15,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libsndfile1 \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-cache-dir "litellm[proxy]==${LITELLM_VERSION}"
+RUN pip install --no-cache-dir "litellm[proxy]==${LITELLM_VERSION}" prisma
+
+COPY generate_prisma.py .
+RUN python generate_prisma.py && rm generate_prisma.py
 
 EXPOSE 4000
 
