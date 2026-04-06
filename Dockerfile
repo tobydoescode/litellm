@@ -3,7 +3,7 @@
 # Build: docker buildx build --platform linux/arm64 -t ghcr.io/<owner>/litellm:v1.82.3 --push .
 ARG LITELLM_VERSION=1.82.3
 
-FROM python:3.11-slim-bookworm
+FROM python:3.13-slim-bookworm
 
 ARG LITELLM_VERSION
 
