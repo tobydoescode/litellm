@@ -1,11 +1,6 @@
 # ARM64 build of LiteLLM
 # Source: https://github.com/BerriAI/litellm
-# Build: docker buildx build --platform linux/arm64 -t ghcr.io/<owner>/litellm:v1.82.3 --push .
-ARG LITELLM_VERSION=1.82.3
-
 FROM python:3.13-slim-bookworm
-
-ARG LITELLM_VERSION
 
 WORKDIR /app
 
@@ -15,7 +10,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libsndfile1 \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-cache-dir "litellm[proxy]==${LITELLM_VERSION}" prisma
+RUN pip install --no-cache-dir uv
+
+COPY requirements.txt .
+RUN uv pip install --system --no-cache -r requirements.txt
 
 COPY generate_prisma.py .
 RUN python generate_prisma.py && rm generate_prisma.py
