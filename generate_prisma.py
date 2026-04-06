@@ -1,6 +1,5 @@
 """Generate Prisma client from LiteLLM's bundled schema at build time."""
 import glob
-import os
 import subprocess
 
 # Find the schema file within the litellm package
