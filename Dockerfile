@@ -1,19 +1,20 @@
 # ARM64 build of LiteLLM
 # Source: https://github.com/BerriAI/litellm
-FROM python:3.13-slim-bookworm
+FROM python:3.14-slim-bookworm
 
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
+    libc6-dev \
     libpq-dev \
     libsndfile1 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir uv
 
-COPY requirements.txt .
-RUN uv pip install --system --no-cache -r requirements.txt
+COPY requirements.txt requirements-override.txt ./
+RUN uv pip install --system --no-cache --override requirements-override.txt -r requirements.txt
 
 COPY generate_prisma.py .
 RUN python generate_prisma.py && rm generate_prisma.py
