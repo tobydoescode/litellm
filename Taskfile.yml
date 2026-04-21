@@ -1,8 +1,8 @@
 version: "3"
 
 vars:
-  IMAGE: evoio/litellm
-  VERSION: 1.82.3
+  IMAGE: ghcr.io/tobydoescode/litellm
+  VERSION: 1.83.9
   PLATFORM: linux/arm64
 
 tasks:
