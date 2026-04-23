@@ -2,21 +2,25 @@ version: "3"
 
 vars:
   IMAGE: ghcr.io/tobydoescode/litellm
-  VERSION: 1.83.9
   PLATFORM: linux/arm64
 
 tasks:
+  lock:
+    desc: Regenerate requirements.txt from requirements.in via uv
+    cmds:
+      - uv pip compile requirements.in -o requirements.txt --python-version 3.13 --universal
+
   build:
     desc: Build LiteLLM ARM64 image
     cmds:
-      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:{{.VERSION}} .
+      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}} .
 
   push:
     desc: Build and push LiteLLM ARM64 image
     cmds:
-      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:{{.VERSION}} --push .
+      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}} --push .
 
   build-load:
     desc: Build and load LiteLLM ARM64 image locally
     cmds:
-      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}}:{{.VERSION}} --load .
+      - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}} --load .

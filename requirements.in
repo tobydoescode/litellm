@@ -1,0 +1,2 @@
+litellm[proxy]==1.83.12
+prisma>=0.15.0
