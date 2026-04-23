@@ -6,9 +6,9 @@ vars:
 
 tasks:
   lock:
-    desc: Regenerate requirements.txt from requirements.in via uv
+    desc: Update uv.lock from pyproject.toml
     cmds:
-      - uv pip compile requirements.in -o requirements.txt --python-version 3.13 --universal
+      - uv lock
 
   build:
     desc: Build LiteLLM ARM64 image

@@ -1,0 +1,12 @@
+[project]
+name = "litellm-build"
+version = "0"
+description = "Multi-arch Docker build of LiteLLM for the home-lab k3s cluster"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "litellm[proxy]==1.83.12",
+    "prisma>=0.15.0",
+]
+
+[tool.uv]
+package = false
