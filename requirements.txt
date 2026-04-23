@@ -30,7 +30,7 @@ azure-core==1.39.0
     # via
     #   azure-identity
     #   azure-storage-blob
-azure-identity==1.25.2
+azure-identity==1.25.3
     # via litellm
 azure-storage-blob==12.28.0
     # via litellm
