@@ -1,13 +1,22 @@
 """Generate Prisma client from LiteLLM's bundled schema at build time."""
 import glob
 import subprocess
+import sys
 
-# Find the schema file within the litellm package
-matches = glob.glob("/usr/local/lib/python*/site-packages/litellm/proxy/**/schema.prisma", recursive=True)
+search_paths = [
+    "/app/.venv/lib/python*/site-packages/litellm/proxy/**/schema.prisma",
+    "/usr/local/lib/python*/site-packages/litellm/proxy/**/schema.prisma",
+]
+
+matches = []
+for pattern in search_paths:
+    matches = glob.glob(pattern, recursive=True)
+    if matches:
+        break
 
 if not matches:
-    print("WARNING: No Prisma schema found, skipping generation")
-    exit(0)
+    print("ERROR: No Prisma schema found in any search path")
+    sys.exit(1)
 
 schema_path = matches[0]
 print(f"Found schema at: {schema_path}")
