@@ -11,16 +11,16 @@ tasks:
       - uv lock
 
   build:
-    desc: Build LiteLLM ARM64 image
+    desc: Build LiteLLM image for PLATFORM
     cmds:
       - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}} .
 
   push:
-    desc: Build and push LiteLLM ARM64 image
+    desc: Build and push LiteLLM image for PLATFORM
     cmds:
       - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}} --push .
 
   build-load:
-    desc: Build and load LiteLLM ARM64 image locally
+    desc: Build and load LiteLLM image for PLATFORM locally
     cmds:
       - docker buildx build --platform {{.PLATFORM}} -t {{.IMAGE}} --load .
