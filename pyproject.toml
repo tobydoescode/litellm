@@ -4,7 +4,7 @@ version = "0"
 description = "Multi-arch Docker build of LiteLLM for the home-lab k3s cluster"
 requires-python = ">=3.13,<3.14"
 dependencies = [
-    "langfuse>=2.60.0,<3",
+    "langfuse>=4.0.6,<5",
     "litellm[proxy]==1.83.14",
     "prisma==0.15.0",
 ]
