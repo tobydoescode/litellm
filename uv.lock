@@ -686,7 +686,7 @@ wheels = [
 
 [[package]]
 name = "litellm"
-version = "1.85.2"
+version = "1.86.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -702,9 +702,9 @@ dependencies = [
     { name = "tiktoken" },
     { name = "tokenizers" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f3/fc/1d30a65cdc3a5370f974e4f571eb497d88243b6abd58269a635da0045bb4/litellm-1.85.2.tar.gz", hash = "sha256:4e8064db7aab0017d0a57fbbd203aa7afa0cf462ccbee4d1328edfa45c50d465", size = 15346880, upload-time = "2026-05-27T08:03:30.285Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/2f/a7/26b8b04e4fcff26b60200ffe7458a255552ae51014468188f5db45674eb2/litellm-1.86.0.tar.gz", hash = "sha256:eccab86e0820b60b3f9484b233fb8d818b97afb19d5b4fa08d0d045621350ba4", size = 15379195, upload-time = "2026-05-24T02:42:10.865Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/85/89/d8c1566085dcf2274374094abdee3b76b84623b46a0cf01115d078a7bd9d/litellm-1.85.2-py3-none-any.whl", hash = "sha256:16d6b63a2c78e1e250e54691f63669ab15c49e11ae6e0457462ac609c4a52352", size = 16980870, upload-time = "2026-05-27T08:03:26.659Z" },
+    { url = "https://files.pythonhosted.org/packages/ff/0b/9a044c061a69e801de042e962c34f5bc2e094810e28b49ce0b3bedee9327/litellm-1.86.0-py3-none-any.whl", hash = "sha256:9d8171ca1a17705b7c7a6fdce8cfc07bbf641284b46c1b6047f83a779159990c", size = 17011225, upload-time = "2026-05-24T02:42:00.629Z" },
 ]
 
 [package.optional-dependencies]
@@ -723,6 +723,7 @@ proxy = [
     { name = "mcp" },
     { name = "orjson" },
     { name = "polars" },
+    { name = "pydantic-settings" },
     { name = "pyjwt" },
     { name = "pynacl" },
     { name = "pyroscope-io", marker = "sys_platform != 'win32'" },
@@ -750,17 +751,17 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "langfuse", specifier = ">=2.60.0,<3" },
-    { name = "litellm", extras = ["proxy"], specifier = "==1.85.2" },
+    { name = "litellm", extras = ["proxy"], specifier = "==1.86.0" },
     { name = "prisma", specifier = "==0.15.0" },
 ]
 
 [[package]]
 name = "litellm-enterprise"
-version = "0.1.40"
+version = "0.1.41"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/f8/b5/c1ef8cbb4555564dc47489d65758d4132bb1a3a5c0991264c57e0069b059/litellm_enterprise-0.1.40.tar.gz", hash = "sha256:f2bc6d8ed3863f51d2aaafa99f2a5cda6ccf9fc64a9c646825ab8051a789bc62", size = 70107, upload-time = "2026-05-05T23:28:14.75Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6a/07/73412b99c6065ae49a5e87b5f5810b94c1743d7cd41d3a701ebf2c0a64d2/litellm_enterprise-0.1.41.tar.gz", hash = "sha256:3bbf37b6e997e28f9a39489ba532ac98f19b5176180ce091c04156ce3f048d54", size = 70437, upload-time = "2026-05-17T02:05:49.282Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/37/45/af3e0922805f81262bdfc6002567e004205b144fd2d011c2891da6f48265/litellm_enterprise-0.1.40-py3-none-any.whl", hash = "sha256:bf0eada2309053556aef09d9071297f3c5952e787df9c283de13a393b6b85251", size = 137250, upload-time = "2026-05-05T23:28:13.82Z" },
+    { url = "https://files.pythonhosted.org/packages/65/16/284b7304dbf6eea7fe79352ca808f310b7e724648e5f3cf7c13a7a54d682/litellm_enterprise-0.1.41-py3-none-any.whl", hash = "sha256:7b31fd807dee8e1900fd15d8344e4509b6aaf05e10a211fc91c30a95e227685f", size = 137669, upload-time = "2026-05-17T02:05:48.24Z" },
 ]
 
 [[package]]
@@ -1130,16 +1131,16 @@ wheels = [
 
 [[package]]
 name = "pydantic-settings"
-version = "2.14.0"
+version = "2.14.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pydantic" },
     { name = "python-dotenv" },
     { name = "typing-inspection" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/42/98/c8345dccdc31de4228c039a98f6467a941e39558da41c1744fbe29fa5666/pydantic_settings-2.14.0.tar.gz", hash = "sha256:24285fd4b0e0c06507dd9fdfd331ee23794305352aaec8fc4eb92d4047aeb67d", size = 235709, upload-time = "2026-04-20T13:37:40.293Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/07/60/1d1e59c9c90d54591469ada7d268251f71c24bdb765f1a8a832cee8c6653/pydantic_settings-2.14.1.tar.gz", hash = "sha256:e874d3bec7e787b0c9958277956ed9b4dd5de6a80e162188fdaff7c5e26fd5fa", size = 235551, upload-time = "2026-05-08T13:40:06.542Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/01/dd/bebff3040138f00ae8a102d426b27349b9a49acc310fcae7f92112d867e3/pydantic_settings-2.14.0-py3-none-any.whl", hash = "sha256:fc8d5d692eb7092e43c8647c1c35a3ecd00e040fcf02ed86f4cb5458ca62182e", size = 60940, upload-time = "2026-04-20T13:37:38.586Z" },
+    { url = "https://files.pythonhosted.org/packages/ae/8d/f1af3832f5e6eb13ba94ee809e72b8ecb5eef226d27ee0bef7d963d943c7/pydantic_settings-2.14.1-py3-none-any.whl", hash = "sha256:6e3c7edfd8277687cdc598f56e5cff0e9bfff0910a3749deaa8d4401c3a2b9de", size = 60964, upload-time = "2026-05-08T13:40:04.958Z" },
 ]
 
 [[package]]
