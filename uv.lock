@@ -715,7 +715,7 @@ wheels = [
 
 [[package]]
 name = "litellm"
-version = "1.87.1"
+version = "1.87.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -731,9 +731,9 @@ dependencies = [
     { name = "tiktoken" },
     { name = "tokenizers" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/5d/e5/d0ac1c8f55e2c8d8799589e831bef0d450e69e02ecb511901ffc8de054d9/litellm-1.87.1.tar.gz", hash = "sha256:70ac9d6b25f56ad30de6ff95d26fac3b3fc697a95da582b6072d25d8dc73d493", size = 15455709, upload-time = "2026-06-04T16:23:23.339Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d4/63/a8623c440a2e2de401c2dd531c376fc74180908f3c1dd4716544b8610cd0/litellm-1.87.2.tar.gz", hash = "sha256:36b172cf8824bed6ae17fb8031a021c8bb2046014303c2220045868f1230690a", size = 15459811, upload-time = "2026-06-11T05:00:02.098Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ff/18/8275c95ef09e81ab0c01a162c7b780ce3fbc49066b5d532c6b6ab3dc0118/litellm-1.87.1-py3-none-any.whl", hash = "sha256:dd4e00278cdb846d52e99a09d732575a897273540b54eb044247ecbc0d98f67c", size = 17105482, upload-time = "2026-06-04T16:23:20.769Z" },
+    { url = "https://files.pythonhosted.org/packages/46/5d/aac1831ada451a3fdd27ed26548ef775a8b29751ac79ea1a105ce693d628/litellm-1.87.2-py3-none-any.whl", hash = "sha256:d2161fc0ce66f800c69fd522cb73f03683edd164fc668e00fc3f23e1f6b4e6bf", size = 17111020, upload-time = "2026-06-11T04:59:59.395Z" },
 ]
 
 [package.optional-dependencies]
@@ -781,7 +781,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "langfuse", specifier = ">=2.60.0,<3" },
-    { name = "litellm", extras = ["proxy"], specifier = "==1.87.1" },
+    { name = "litellm", extras = ["proxy"], specifier = "==1.87.2" },
     { name = "prisma", specifier = "==0.15.0" },
 ]
 
