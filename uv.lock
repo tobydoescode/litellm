@@ -730,7 +730,7 @@ wheels = [
 
 [[package]]
 name = "litellm"
-version = "1.92.0"
+version = "1.92.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -746,10 +746,10 @@ dependencies = [
     { name = "tiktoken" },
     { name = "tokenizers" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/46/ea/5522be7e0dbcaa7c3fddfd2834f387c6e8eab47c0cc65f2a74657c815af7/litellm-1.92.0.tar.gz", hash = "sha256:773adf5503ee1793289689c899394a83df8122993760d9acd782e32aa798db9d", size = 15098143, upload-time = "2026-07-12T01:15:59.828Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/5d/dd/fd3977f95b0d8dfbe7293930254e6351fe8318a907f7f68788f5669ada7f/litellm-1.92.1.tar.gz", hash = "sha256:3bfce25de499bfda6f24b0b2d25844726d6d24c46e0868622147640012e7e2d8", size = 15120645, upload-time = "2026-07-19T03:44:20.148Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/10/34/1671376f228443330471416e24ee51bc8364c0ae6155d4ec6217b70a4753/litellm-1.92.0-cp313-cp313-manylinux_2_28_aarch64.whl", hash = "sha256:437a0e403136996430795ead76502103dcf74769b6909e12d3e2511061ea8ff8", size = 19291560, upload-time = "2026-07-12T01:15:54.66Z" },
-    { url = "https://files.pythonhosted.org/packages/3d/4f/141cf1162eeee762fc839c335e3f78fc309a65f2385023479a20b09e680a/litellm-1.92.0-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:8f03047a73154f33c2733899e4bf9b5ed129e2e345caa305895a318452e4a807", size = 19289770, upload-time = "2026-07-12T01:15:57.136Z" },
+    { url = "https://files.pythonhosted.org/packages/44/59/14f64f1b47e2ba4aa2998af1c0c901ecc66ff43f27e362869c994747264c/litellm-1.92.1-cp313-cp313-manylinux_2_28_aarch64.whl", hash = "sha256:d5f34306332ac4eb23104603108d20a7f68def37c558745edf081e9b2fc14a22", size = 19291487, upload-time = "2026-07-19T03:44:15.404Z" },
+    { url = "https://files.pythonhosted.org/packages/c7/11/d17a3d5fbeb7f943825134d7441ffbaae25bbf59c99a43e6cb424bc37856/litellm-1.92.1-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:85406da105c4d0dc9d1d909eb547624114409eda551dbc331dd1f6dff9b9ac79", size = 19289860, upload-time = "2026-07-19T03:44:17.596Z" },
 ]
 
 [package.optional-dependencies]
@@ -799,7 +799,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "langfuse", specifier = ">=2.60.0,<3" },
-    { name = "litellm", extras = ["proxy"], specifier = "==1.92.0" },
+    { name = "litellm", extras = ["proxy"], specifier = "==1.92.1" },
     { name = "prisma", specifier = "==0.15.0" },
 ]
 
