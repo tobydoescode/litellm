@@ -1,6 +1,6 @@
 # Multi-arch build of LiteLLM
 # Source: https://github.com/BerriAI/litellm
-FROM python:3.13-slim-bookworm@sha256:00faa2debb87529f9f0764e9491d8ba400a3678976616c3bd7cb193745ac20d1 AS builder
+FROM python:3.13-slim-bookworm@sha256:c45a22ea000adfd9cda29364bbe7edd23001ce5cc2ad15857cfbf7766943b9ca AS builder
 
 WORKDIR /app
 
@@ -18,7 +18,7 @@ RUN uv sync --frozen --no-dev --no-install-project
 COPY generate_prisma.py .
 RUN uv run python generate_prisma.py && rm generate_prisma.py
 
-FROM python:3.13-slim-bookworm@sha256:00faa2debb87529f9f0764e9491d8ba400a3678976616c3bd7cb193745ac20d1 AS runtime
+FROM python:3.13-slim-bookworm@sha256:c45a22ea000adfd9cda29364bbe7edd23001ce5cc2ad15857cfbf7766943b9ca AS runtime
 
 WORKDIR /app
 
